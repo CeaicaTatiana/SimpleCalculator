@@ -29,3 +29,6 @@ body { /* dial the background */
 .calculator-grid > button:hover{ /*change the color when hover*/
   background-color: rgba(255,255,255,.90);
 }
+.span-two{
+  grid-column: span 2;
+}
