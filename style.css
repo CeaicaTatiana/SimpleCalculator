@@ -30,5 +30,17 @@ body { /* dial the background */
   background-color: rgba(255,255,255,.90);
 }
 .span-two{
-  grid-column: span 2;
+  grid-column: span 2; /*make AC and = buttons larger*/
+}
+
+.output {
+  grid-column: 1/-1; /*to fill the entire width of the top row*/
+  background-color: rgba(0, 0, 0, .75);
+  display: flex; /*alighn the numbers inside of the output tab*/
+  align-items: flex-end;
+  justify-content: space-around; /*numbers will be closer*/
+  flex-direction: column; /*numbers line up vertically*/
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;/*allow number to wrap to the next line*/
 }
