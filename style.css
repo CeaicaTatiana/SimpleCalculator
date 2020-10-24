@@ -4,8 +4,18 @@
   font-weight: normal;
 }
 
-body {
-  padding: 0;
+body { <!-- dial the background-->
+  padding: 0; <!-- remove padding and margin so that the backgr. fills the entire screen-->
   margin: 0;
-  background: linear-gradient(to right, #00AAFF,#00FF6C);
+  background: linear-gradient(to right, #00AAFF,#00FF6C); <!-- applied for using two colors -->
+}
+
+.calculator-grid { <!-- style the grid-->
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,100px);
+  grid-template-rows: minmax(120px,auto)repeat(5,100px);
+
 }
