@@ -33,7 +33,7 @@ class Calculator {
   }
 
   compute() { //take the values inside of the calculator and compute a single value displayed on the output screen
-    let computation
+    let computation // it will be the result of our compute function
     const prev = parseFloat(this.previousOperand)
     const current = parseFloat(this.currentOperand)
     if (isNaN(prev) || isNaN(current)) return
@@ -99,31 +99,31 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 //make the variables to operate on calculator object
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
-numberButtons.forEach(button => {
+numberButtons.forEach(button => { //take the number and display it
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
     calculator.updateDisplay()
   })
 })
 
-operationButtons.forEach(button => {
+operationButtons.forEach(button => { //alows to use the operations
   button.addEventListener('click', () => {
     calculator.chooseOperation(button.innerText)
     calculator.updateDisplay()
   })
 })
 
-equalsButton.addEventListener('click', button => {
+equalsButton.addEventListener('click', button => { //makes the equal button to function
  calculator.compute()
  calculator.updateDisplay()
 })
 
-allClearButton.addEventListener('click', button => {
+allClearButton.addEventListener('click', button => { //makes AC to function
   calculator.clear()
   calculator.updateDisplay()
 })
 
-deleteButton.addEventListener('click', button => {
+deleteButton.addEventListener('click', button => { //makes DEL button to function
   calculator.delete()
   calculator.updateDisplay()
 })
